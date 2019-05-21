@@ -1,0 +1,50 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'npmcheckversion' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 verbose run-script [ 'prenpmcheckversion',
+4 verbose run-script   'npmcheckversion',
+4 verbose run-script   'postnpmcheckversion' ]
+5 info lifecycle react-boilerplate@4.0.0~prenpmcheckversion: react-boilerplate@4.0.0
+6 silly lifecycle react-boilerplate@4.0.0~prenpmcheckversion: no script for prenpmcheckversion, continuing
+7 info lifecycle react-boilerplate@4.0.0~npmcheckversion: react-boilerplate@4.0.0
+8 verbose lifecycle react-boilerplate@4.0.0~npmcheckversion: unsafe-perm in lifecycle true
+9 verbose lifecycle react-boilerplate@4.0.0~npmcheckversion: PATH: C:\Users\Mulraj\AppData\Roaming\nvm\v6.11.2\node_modules\npm\bin\node-gyp-bin;D:\wamp\www\react-demo\node_modules\.bin;C:\Users\Mulraj\AppData\Local\Temp\yarn--1557322034627-0.43562059287241106;D:\wamp\www\react-demo\node_modules\.bin;C:\Users\Mulraj\AppData\Local\Yarn\Data\link\node_modules\.bin;D:\wamp\www\react-demo\node_modules\.bin;C:\Users\Mulraj\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Program Files\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;D:\wamp\www\react-demo\node_modules\.bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;C:\Users\Mulraj\AppData\Roaming\nvm;C:\Program Files\nodejs;D:\wamp\bin\php\php7.2.10;C:\ProgramData\ComposerSetup\bin;C:\Program Files\PostgreSQL\9.5\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MongoDB\Server\3.6\bin;D:\wamp\bin\ImageMagick-7.0.8-Q16;C:\Program Files\TortoiseSVN\bin;C:\OpenSSL-Win64\bin\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\JetBrains\PhpStorm 2018.1.5\bin;C:\Users\Mulraj\AppData\Local\Android\Sdk\tools;C:\Program Files (x86)\Yarn\bin\;C:\Users\Mulraj\.windows-build-tools\python27;C:\Users\Mulraj\AppData\Roaming\nvm\v10.14.1\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Program Files\nodejs\node_modules\windows-build-tools\node_modules\.bin;C:\Program Files\nodejs\node_modules\.bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;C:\Users\Mulraj\AppData\Roaming\nvm;C:\Program Files\nodejs;D:\wamp\bin\php\php7.2.10;C:\ProgramData\ComposerSetup\bin;C:\Program Files\PostgreSQL\9.5\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MongoDB\Server\3.6\bin;D:\wamp\bin\ImageMagick-7.0.8-Q16;C:\Program Files\TortoiseSVN\bin;C:\OpenSSL-Win64\bin\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\JetBrains\PhpStorm 2018.1.5\bin;C:\Users\Mulraj\AppData\Local\Android\Sdk\tools;C:\Program Files (x86)\Yarn\bin\;C:\Users\Mulraj\.windows-build-tools\python27\;C:\Users\Mulraj\AppData\Roaming\nvm\v8.9.4\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\Mulraj\AppData\Roaming\npm\node_modules\windows-build-tools\node_modules\.bin;C:\Users\Mulraj\AppData\Roaming\npm\node_modules\.bin;D:\wamp\bin\php\php7.2.5;C:\Users\Mulraj\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\Mulraj\AppData\Local\Programs\Python\Python37\;C:\Users\Mulraj\scoop\shims;C:\Users\Mulraj\AppData\Local\Microsoft\WindowsApps;C:\Users\Mulraj\AppData\Local\Programs\EmEditor;C:\Users\Mulraj\AppData\Roaming\Composer\vendor\bin;C:\Users\Mulraj\AppData\Roaming\npm;;C:\Users\Mulraj\AppData\Local\Microsoft\WindowsApps;C:\Users\Mulraj\AppData\Local\Yarn\bin
+10 verbose lifecycle react-boilerplate@4.0.0~npmcheckversion: CWD: D:\wamp\www\react-demo
+11 silly lifecycle react-boilerplate@4.0.0~npmcheckversion: Args: [ '/d /s /c', 'node ./internals/scripts/npmcheckversion.js' ]
+12 silly lifecycle react-boilerplate@4.0.0~npmcheckversion: Returned: code: 1  signal: null
+13 info lifecycle react-boilerplate@4.0.0~npmcheckversion: Failed to exec npmcheckversion script
+14 verbose stack Error: react-boilerplate@4.0.0 npmcheckversion: `node ./internals/scripts/npmcheckversion.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\Mulraj\AppData\Roaming\nvm\v6.11.2\node_modules\npm\lib\utils\lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Users\Mulraj\AppData\Roaming\nvm\v6.11.2\node_modules\npm\lib\utils\spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:891:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+15 verbose pkgid react-boilerplate@4.0.0
+16 verbose cwd D:\wamp\www\react-demo
+17 error Windows_NT 10.0.17763
+18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "npmcheckversion"
+19 error node v6.11.2
+20 error npm  v3.10.10
+21 error code ELIFECYCLE
+22 error react-boilerplate@4.0.0 npmcheckversion: `node ./internals/scripts/npmcheckversion.js`
+22 error Exit status 1
+23 error Failed at the react-boilerplate@4.0.0 npmcheckversion script 'node ./internals/scripts/npmcheckversion.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the react-boilerplate package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node ./internals/scripts/npmcheckversion.js
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs react-boilerplate
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls react-boilerplate
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
