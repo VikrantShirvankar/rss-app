@@ -20,7 +20,7 @@ export class Rss extends React.Component {
     super();
     this.state = {
       links: [],
-      link: null,
+      link: '',
       linkValidation: null,
     };
   }
@@ -44,12 +44,12 @@ export class Rss extends React.Component {
     var re = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
     if (re.test(link)) {
       const linksData = [{ id: new Date().getTime(), link }, ...links];
-      this.setState({ links: linksData, link: null, linkValidation: null });
+      this.setState({ links: linksData, link: '', linkValidation: null });
       localStorage.setItem('links', JSON.stringify(linksData));
       dispatch(getRssFeeds(link));
       history.push(`/${linksData[0].id}`);
     } else {
-      this.setState({ link: null, linkValidation: 'Invalid Link' });
+      this.setState({ link: '', linkValidation: 'Invalid Link' });
     }
   }
 
@@ -94,7 +94,7 @@ export class Rss extends React.Component {
                     className="form-control"
                     placeholder="Enter link"
                     required
-                    value={this.state.link || undefined}
+                    value={link}
                     onChange={e => this.setState({ link: e.target.value })}
                   />
                 </div>
