@@ -9,6 +9,7 @@ import { GET_FEEDS_REQUEST, GET_FEEDS_SUCCESS, GET_FEEDS_FAILURE } from './const
 export const initialState = {
   feedsData: {},
   loading: false,
+  errorMsg: null,
 };
 
 /* eslint-disable default-case, no-param-reassign */
@@ -16,12 +17,11 @@ const rssReducer = (state = initialState, action) =>
   produce(state, (/* draft */) => {
     switch (action.type) {
       case GET_FEEDS_REQUEST:
-        return { ...state, loading: true };
+        return { ...state, loading: true, errorMsg: null };
       case GET_FEEDS_SUCCESS:
-        return { ...state, feedsData: action.payload, loading: false };
+        return { ...state, feedsData: action.payload, loading: false, errorMsg: null };
       case GET_FEEDS_FAILURE:{
-        console.log('came in failure');
-        return { ...state, feedsData: {}, loading: false };
+        return { ...state, feedsData: {}, loading: false, errorMsg: action.payload.message };
       }
       default:
         return state;

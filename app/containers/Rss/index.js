@@ -56,11 +56,12 @@ export class Rss extends React.Component {
   removeLink(e, id) {
     e.stopPropagation();
     const { links } = this.state;
-    const { dispatch, match } = this.props;
+    const { dispatch, match, history } = this.props;
     const data = links.filter(p => p.id !== id);
     this.setState({ links: data });
     if(parseInt(match.params.id, 10) === id) {
       dispatch(clearData());
+      history.push('/');
     }
     localStorage.setItem('links', JSON.stringify(data));
   }
@@ -74,13 +75,16 @@ export class Rss extends React.Component {
   }
 
   render() {
-    const { links, linkValidation } = this.state;
+    const { links, linkValidation, link } = this.state;
     const {
-      rss: { feedsData, loading },
+      rss: { feedsData, loading, errorMsg },
       match,
     } = this.props;
+    const activeLinkStyle = { backgroundColor: 'grey', color: '#fff', borderRadius: '10px' };
+    const normalLinkStyle = { backgroundColor: 'lightgrey', color: '#000', borderRadius: '10px' };
+
     return (
-        <div className="row justify-content-center h-100" style={{ border: '1px solid blue' }}>
+        <div className="row m-0">
           <div className="col-sm-12 col-lg-4 col-xl-3">
             <div className="p-3" style={{ borderBottom: '3px solid grey' }}>
               <form onSubmit={e => this.addLink(e)}>
@@ -90,6 +94,7 @@ export class Rss extends React.Component {
                     className="form-control"
                     placeholder="Enter link"
                     required
+                    value={this.state.link || undefined}
                     onChange={e => this.setState({ link: e.target.value })}
                   />
                 </div>
@@ -104,7 +109,7 @@ export class Rss extends React.Component {
                 <div
                   role="presentation"
                   className="p-2 mb-2 row m-0"
-                  style={{ backgroundColor: parseInt(match.params.id, 10) === l.id ? 'grey' : 'lightgrey', borderRadius: '10px' }}
+                  style={parseInt(match.params.id, 10) === l.id ? activeLinkStyle : normalLinkStyle }
                   key={l.id}
                   onClick={() => this.onSelect(l.id, l.link)}
                 >
@@ -126,7 +131,10 @@ export class Rss extends React.Component {
                   <div className="p-2 p-lg-5">
                     {feedsData.items && feedsData.items.length
                       ? feedsData.items.map(item => <Feeds key={item.title} item={item} />)
-                      : <div className="text-center"><h2>No data found</h2></div>}
+                      : <div className="text-center">
+                          <h2>No data found</h2>
+                          <p>{errorMsg}</p>
+                        </div>}
                   </div>
                 </Fragment> :
                 <div className="w-100 d-flex align-items-center justify-content-center" style={{ height: 300 }}>
@@ -135,7 +143,6 @@ export class Rss extends React.Component {
                   </div>
                 </div>
             }
-
           </div>
         </div>
     );

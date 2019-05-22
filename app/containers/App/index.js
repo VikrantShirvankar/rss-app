@@ -9,9 +9,6 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-
-import HomePage from 'containers/HomePage/Loadable';
-import Demo from 'containers/Demo/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Rss from 'containers/Rss/Loadable';
 
@@ -22,7 +19,6 @@ export default function App() {
     <div>
       <Switch>
         <Route exact path="/:id?" component={Rss} />
-        <Route exact path="/demo" component={Demo} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

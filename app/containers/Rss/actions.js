@@ -21,5 +21,6 @@ export function getRssFeeds(link) {
 export function clearData() {
   return {
     type: GET_FEEDS_FAILURE,
+    payload: { message: null }
   };
 }
